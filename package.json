@@ -1,0 +1,19 @@
+{
+  "name": "1.fundamentos-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-function.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlucascardoso/30daysofcode.git"
+  },
+  "author": "devlucascardoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devlucascardoso/30daysofcode/issues"
+  },
+  "homepage": "https://github.com/devlucascardoso/30daysofcode#readme"
+}
