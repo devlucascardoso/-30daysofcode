@@ -1,4 +1,4 @@
-const readfile = require("readline");
+/*const readfile = require("readline");
 const terminal = readfile.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -27,3 +27,90 @@ async function main() {
 }
 
 main();
+*/
+
+
+// PROMISE
+fetch('coffee.jpg')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.blob();
+    })
+    .then(myBlob => {
+      let objectURL = URL.createObjectURL(myBlob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+    })
+    .catch(e => {
+      console.log('There has been a problem with your fetch operation: ' + e.message);
+    });
+
+    // TRANSFORMANDO EM ASYNC/AWAIT
+
+    async function myFetch() {
+      let response = await fetch('coffee.jpg');
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      let myBlob = await response.blob();
+
+      let objectURL = URL.createObjectURL(myBlob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+    }
+
+    myFetch()
+    .catch(error => {
+      console.log('There has been a problem with your fetch operation: ' + error.message);
+    })
+
+    //REFATORANDO CÓDIGO ACIMA
+
+    async function myFetch() {
+      let response = await fetch('coffee.jpg');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return await response.blob();
+
+    }
+  
+  myFetch().then((blob) => {
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+    })
+    //TRATAMENTO DE ERRO:
+    //OUTRA OPÇÃO É USANDO O TRY, CATCH
+    .catch((error) => 
+      console.log(error)
+      );
+  
+
+
+      async function fetchAndDecode(url, type) {
+        let response = await fetch(url);
+      
+        let content;
+      
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+          if(type === 'blob') {
+            content = await response.blob();
+          } else if(type === 'text') {
+            content = await response.text();
+          }
+        }
+      
+        return content;
+      
+      
+      }
