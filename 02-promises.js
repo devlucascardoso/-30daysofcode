@@ -5,7 +5,7 @@
 */
 
 //ENTENDENDO NA PRÁTICA COMO FUNCIONA OS CALLBACKS
-
+/*
 function obterUsuario() {
   setTimeout(() => {
     return {
@@ -32,3 +32,7 @@ const telefone = obterTelefone(usuario.id);
 
 console.log("usuario", usuario);
 console.log("telefone", telefone);
+*/
+
+let fifteen = Promise.resolve(15);
+fifteen.then(value => console.log(`Got ${value}`));
