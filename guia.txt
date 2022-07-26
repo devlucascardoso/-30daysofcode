@@ -1,0 +1,23 @@
+@Tópicos de estudo para JavaScript
+https://gist.github.com/vinicius73/60027329a3855345e15b2eeaa3fd588d#guia-de-referencias-para-estudo-de-javascript
+
+->Base JS
+Variables + Lexical Scope
+Prototype chain
+Funções Construtoras
+ES6 Class
+Factory
+Mixins
+Composição
+Composição vs Herança Clássica
+Funções Construtoras vs Factory
+Funções Construtoras vs ES6 Class
+
+->Aprofundamento
+call, bind, apply
+Async/Sync (event loop)
+Callbacks
+Promises
+Lexical this
+UMD/AMD
+ESModules
