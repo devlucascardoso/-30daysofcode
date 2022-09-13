@@ -1,10 +1,12 @@
 // -> VARIABLES
-//Podemos declarar variáveis para armazenar dados usando as palavras-chave abaixo:
-//let – é uma declaração variável moderna.
-//const – é como, mas o valor da variável não pode ser alterado.
-//var – Não usar.
+//var -  Ao utilizar var, a variável é declara e inicializada no escopo da função, não respeitando bloco e permitindo reatribuição mas não a redeclaração.
+//let – Ao utilizar let, a variável é declarada no escopo da função mas só é inicializada posteriormente, respeitando bloco e permitindo reatribuição mas não a redeclaração.
+//const – Ao utilizar const, a variável é declara no escopo da função mas só é inicializada posteriormente, respeitando bloco e não permitindo reatribuição nem redeclaração.
 
-//1- LET || É possivel alterar dados da variável.
+//OBS:NUNCA declare uma variável sem var,let ou const.
+//Para declarar um identificador válido use: [a-zA-Z0-9_$]
+
+//1- LET || É possivel reatribuir valor.
 let firstName
 firstName = 'Lucas'
 console.log(firstName) // Lucas
@@ -19,7 +21,8 @@ console.log(myBirthday) // 18.04.1982
 //É uma constante porém pode alterar os dados :/
 
 // ->SCOPE
-//JavaScript é uma linguagem muito orientada para funções. Isso nos dá muita liberdade. Uma função pode ser criada a qualquer momento, passada como um argumento para outra função, e então chamada de um lugar totalmente diferente de código mais tarde.
+//JavaScript é uma linguagem muito orientada para funções. Isso nos dá muita liberdade. Uma função pode ser criada a qualquer momento, passada como um argumento para outra função, 
+//então chamada de um lugar totalmente diferente de código mais tarde.
 
 //EX1
 /*{
